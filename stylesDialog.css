@@ -1,0 +1,120 @@
+.dialog{
+    font-family: "Red Hat Text", sans-serif;
+    padding: 1rem;
+}
+
+.confirmedText{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0rem;
+    color: hsl(14, 65%, 9%);
+    margin-right: 10rem;
+}
+
+.hope{
+    font-size: 0.8rem;
+    color: hsl(7, 20%, 60%);
+    margin-top: 0.1rem;
+}
+
+.card{
+    background-color: hsl(20, 50%, 98%);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.final-item{
+    display: none;
+}
+
+.inside-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.part1{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.thumbnail{
+    width: 55px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+.final-name{
+    white-space: nowrap;
+    color: hsl(14, 65%, 9%);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.final-quantity{
+    color: hsl(14, 86%, 42%);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.final-price{
+    color: hsl(12, 20%, 44%);
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+
+}
+
+.final-total-price {
+    color: hsl(12, 20%, 44%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.quantity-price{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+hr{
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: hsla(7, 7%, 78%, 0.356);
+    margin: 0.5rem 0;
+}
+
+.final-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.fina-total-price-value{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: hsl(14, 95%, 15%);
+}
+
+.fina-total-price-text{
+    font-size: 1rem;
+}
+
+.start-new-order{
+    width: 100%;
+    margin: 1rem 0;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 3rem;
+    font-family: "Red Hat Text", sans-serif;
+    cursor: pointer;
+}
+
+.start-new-order:hover{
+    background-color: hsl(14, 95%, 15%);
+    color: #fff;
+}

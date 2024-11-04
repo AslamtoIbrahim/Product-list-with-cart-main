@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Product list with cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+
+      <div class="section1">
+        <h1>Desserts</h1>
+        <div id="dessertes" class="dessertes">
+          <div class="item" id="item">
+            <img id="image" class="itemImage" src="assets/images/image-waffle-desktop.jpg" alt="">
+            <button id="addCart" class="addCart"><img src="assets/images/icon-add-to-cart.svg" alt=""> Add to
+              Cart</button>
+            <div class="crement" id="crement">
+              <div id="decrement" class="decrement"><img class="img-crement"
+                  src="assets/images/icon-decrement-quantity.svg" alt=""></div>
+              <p id="how-many" class="howmany">0</p>
+              <div id="increment" class="increment"><img class="img-crement"
+                  src="assets/images/icon-increment-quantity.svg" alt=""></div>
+            </div>
+            <p class="category" id="category">Waffle</p>
+            <p class="name" id="name">Waffle with Berries</p>
+            <p class="price" id="price">$6.50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section2">
+        <div class="cart" id="cart">
+          <p class="quantity" id="quantity">Your Cart (<span>0</span>)</p>
+          <div class="empty" id="empty">
+            <img class="cake" src="assets/images/illustration-empty-cart.svg" alt="">
+            <p class="message">Your added items will appear here</p>
+          </div>
+          <div class="full" id="full">
+            <div id="tableItems">
+              <div class="item-section" id="itemSection">
+                <div class="total-item" id="totalItem">
+                  <div class="details">
+                    <div class="part1">
+                      <p class="total-name" id="totalName">Macarona Mix of Five</p>
+                    </div>
+                    <div class="part2">
+                      <p class="total-quantity" id="totalQuantity">2x</p>
+                      <p class="total-price" id="totalPrice">@ $8.00</p>
+                      <p class="total-price-total" id="totalPriceTotal">$16.00</p>
+                    </div>
+                  </div>
+                  <div class="remove-item">
+                    <img class="remove" src="assets/images/icon-remove-item.svg" alt="remove">
+                  </div>
+                </div>
+                <hr>
+              </div>
+            </div>
+            <div class="total-cart">
+              <p class="total-price-text">Order Total:</p>
+              <p class="total-price-value" id="totalPriceTotalFinal">$16.00</p>
+            </div>
+            <div class="delivery">
+              <div class="icon-delivery"><img src="assets/images/icon-carbon-neutral.svg" alt=""></div>
+              <p class="text-delivery">This is a <span>carbon-neutral</span> delivery</p>
+            </div>
+            <dialog id="myDialog"></dialog>
+            <button class="confirm-order" id="confirmOrder" onclick="confirmOrder()">Confirm Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="script.js"></script>
+  </main>
+</body>
+
+</html>

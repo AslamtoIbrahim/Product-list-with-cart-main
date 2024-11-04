@@ -1,0 +1,402 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Text", sans-serif;
+    background-color: hsl(20, 50%, 98%);
+}
+
+h1 {
+    color: hsl(14, 65%, 9%);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.dessertes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.item {
+    background-color: transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item .itemImage {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 0px solid hsl(14, 86%, 42%);
+}
+
+.item button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 3rem;
+    background-color: #fff;
+    border: 1px solid hsl(12, 20%, 44%);
+    font-family: "Red Hat Text", sans-serif;
+    font-size: clamp(0.5em, 1vw, 1.5em);
+    font-weight: 700;
+    color: hsl(14, 65%, 9%);
+    width: 60%;
+    position: relative;
+    top: -1rem;
+    cursor: pointer;
+}
+
+.item button:hover {
+    background-color: hsl(14, 25%, 72%);
+    color: #fff;
+    border: 1px solid hsl(14, 25%, 72%);
+}
+
+.item button img {
+    width: 20px;
+    height: 21px;
+    max-width: 15%;
+}
+
+.crement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(14, 86%, 42%);
+    padding: 0.5em 1em;
+    border-radius: 3em;
+    border: 1px solid hsl(12, 20%, 44%);
+    font-size: clamp(0.5em, 1vw, 1.5em);
+    font-weight: 500;
+    color: hsl(0deg 0% 100%);
+    width: 60%;
+    position: relative;
+    top: -1rem;
+    display: none;
+}
+
+#decrement,
+#increment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.1rem;
+}
+
+
+#decrement:hover,
+#increment:hover {
+    background-color: hsl(14, 65%, 9%);
+}
+
+.crement p {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.item .name,
+.category,
+.price {
+    width: 100%;
+    text-align: start;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    font-size: clamp(0.9rem, 1vw, 1.5rem);
+}
+
+@font-face {
+    font-family: 'RedHatText';
+    src: url('assets/fonts/RedHatText-VariableFont_wght.ttf');
+}
+
+.category,
+.total-price,
+.total-price-total {
+    color: hsl(12, 20%, 44%);
+    font-family: 'RedHatText', sans-serif;
+}
+
+@font-face {
+    font-family: 'RedHatTextBold';
+    src: url('assets/fonts/static/RedHatText-SemiBold.ttf');
+}
+
+.name,
+.total-name {
+    color: hsl(14, 65%, 9%);
+    font-family: 'RedHatTextBold', sans-serif;
+}
+
+.price,
+.total-quantity {
+    color: hsl(14, 86%, 42%);
+    font-family: 'RedHatTextBold', sans-serif;
+
+}
+
+
+/* this is section 2 Your cart (0) */
+.cart {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.5rem;
+    padding: 0.1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.cart .quantity {
+    text-align: start;
+    width: 100%;
+    font-weight: bold;
+    color: hsl(14, 86%, 42%);
+    font-size: 1.1em;
+}
+
+.cart .cake {
+    width: 50%;
+}
+
+.cart .message {
+    font-size: clamp(0.5rem, 1.1vw, 1.5rem);
+    font-weight: 600;
+    color: hsl(12, 20%, 44%);
+    margin-bottom: 1.5rem;
+}
+
+.empty {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.full {
+    width: 100%;
+    display: none;
+}
+
+.item-section {
+    display: none;
+}
+
+.total-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-name {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+
+}
+
+.total-quantity {
+    margin: 0;
+
+}
+
+.total-price {
+    margin: 0;
+
+
+}
+
+.total-price-total {
+    font-weight: 500;
+    margin: 0;
+}
+
+.details {
+    font-size: 1.3vw;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: clamp(0.5rem, 1vw, 1rem);
+
+}
+
+.remove:hover {
+    border: 1.5px solid hsl(14, 95%, 15%);
+    fill: #fff;
+}
+
+.remove {
+    width: clamp(12px, 2vw, 18px);
+    height: clamp(12px, 2vw, 18px);
+    border: 1.5px solid hsl(13.71deg 24.82% 72.35%);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: hsla(7, 7%, 78%, 0.356);
+    margin: 0.5rem 0;
+}
+
+.total-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-price-text {
+    font-size: clamp(0.5rem, 1.5vw, 1.2rem);
+}
+
+.total-price-value {
+    font-weight: 700;
+    font-size: clamp(0.7rem, 1.5vw, 1.3rem);
+    color: hsl(14, 95%, 15%);
+}
+
+.delivery {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: hsl(20, 50%, 98%);
+    padding: 0.25rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.text-delivery {
+    font-size: clamp(0rem, 0.9vw, 1rem);
+}
+
+.text-delivery span {
+    font-weight: 600;
+}
+
+.confirm-order {
+    width: 100%;
+    margin: 1rem 0;
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    font-family: "Red Hat Text", sans-serif;
+    cursor: pointer;
+}
+
+.confirm-order:hover {
+    background-color: hsl(14, 95%, 15%);
+    color: #fff;
+}
+
+dialog {
+    border: none;
+    border-radius: 1rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width:1000px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cart .message {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    .total-name {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: clamp(1rem, 1vw, 2rem);
+    }
+
+    .remove {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .part2 {
+        font-size: clamp(1rem, 1vw, 2rem);
+    }
+
+    .total-price-text {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+
+    .total-price-value {
+        font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+    }
+
+    .text-delivery {
+        font-size: clamp(1rem, 2vw, 1rem);
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .dessertes {
+        grid-template-columns: 1fr;
+    }
+
+    .item button {
+        font-size: clamp(0.8em, 1vw, 1.5em);
+        width: 50%;
+    }
+
+    .crement {
+        font-size: clamp(0.8em, 1vw, 1.5em);
+        width: 50%; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
